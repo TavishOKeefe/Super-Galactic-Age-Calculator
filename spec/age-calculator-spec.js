@@ -32,4 +32,9 @@ describe('Age', function(){
     expect(newObject.userAgeInJupiterYears()).toEqual(1);
   });
 
+  it('should check how many years user has left to live, or how many years they have outlived their life expectancy', function(){
+    let newObject = new Age(1920, 5, 20, "m");
+    expect(newObject.timeLeftToLive()).toEqual(44);
+  });
+
 });

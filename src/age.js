@@ -71,7 +71,69 @@ class Age {
 
   }
 
+  timeLeftToLive(){
 
+    let age = this.ageOfUser();
+    let timeLeft = 0;
+    let timeOutlived = 0;
+
+    if (this.sex === "m") {
+      if (age >= 99 && age <= 109) {
+        timeOutlived += (age - 49);
+      } else if (age >= 89 && age < 99) {
+          timeOutlived += (age - 54);
+      } else if (age >= 79 && age < 89) {
+          timeOutlived += (age - 60);
+      } else if (age >= 69 && age < 79) {
+          timeOutlived += (age - 62);
+      } else if (age > 67 && age < 69) {
+          timeOutlived += (age - 67);
+      } else if (age >= 59 && age <= 67) {
+          timeLeft += (age - 67) * -1;
+      } else if (age >= 49 && age < 59) {
+          timeLeft += (age - 67) * -1;
+      } else if (age >= 39 && age < 49) {
+          timeLeft += (age - 68) * -1;
+      } else if (age >= 29 && age < 39) {
+          timeLeft += (age - 71) * -1;
+      } else if (age >= 19 && age < 29) {
+          timeLeft += (age - 73) * -1;
+      } else if (age > 0 && age < 19) {
+          timeLeft += (age - 75) * -1;
+      }
+    }
+
+    if (this.sex === "f") {
+      if (age >= 99 && age <= 109) {
+        timeOutlived += (age - 52);
+      } else if (age >= 89 && age < 99) {
+          timeOutlived += (age - 66);
+      } else if (age >= 79 && age < 89) {
+          timeOutlived += (age - 64);
+      } else if (age >= 69 && age < 79) {
+          timeOutlived += (age - 67);
+      } else if (age >= 59 && age < 69) {
+          timeLeft += (age - 72) * -1;
+      } else if (age >= 49 && age < 59) {
+          timeLeft += (age - 67) * -1;
+      } else if (age >= 39 && age < 49) {
+          timeLeft += (age - 68) * -1;
+      } else if (age >= 29 && age < 39) {
+          timeLeft += (age - 71) * -1;
+      } else if (age >= 19 && age < 29) {
+          timeLeft += (age - 73) * -1;
+      } else if (age > 0 && age < 19) {
+          timeLeft += (age - 75) * -1;
+      }
+    }
+
+    if (timeLeft === 0){
+      return timeOutlived;
+    } else if (timeOutlived === 0){
+      return timeLeft;
+    }
+
+  }
 
 
 
