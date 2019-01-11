@@ -14,6 +14,8 @@ $(document).ready(function(){
     let inputDate = parseInt($('#day').val());
     let inputSex = parseInt($('#sex').val());
 
+    console.log(inputYear);
+
     let userInformation = new Age(inputYear, inputMonth, inputDate, inputSex)
 
     if (inputMonth < 1 || inputMonth > 12){
@@ -23,6 +25,7 @@ $(document).ready(function(){
     } else if (inputSex === 0){
       $('#result').html("Please select your gender.");
     } else {
+      $('#result').hide();
       $('#age-on-earth').text("This is your age on Earth: " + userInformation.ageOfUser());
       $('#age-on-mercury').text("This is your age on Mercury: " + userInformation.userAgeInMercuryYears());
       $('#age-on-venus').text("This is your age on Venus: " + userInformation.userAgeInVenusYears());
