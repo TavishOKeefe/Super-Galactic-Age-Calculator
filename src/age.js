@@ -74,68 +74,87 @@ class Age {
   timeLeftToLive(){
 
     let age = this.ageOfUser();
-    let timeLeft = 0;
-    let timeOutlived = 0;
+    let time = 0;
 
     if (this.sex === "m") {
       if (age >= 99 && age <= 109) {
-        timeOutlived += (age - 49);
+        time += (age - 49);
       } else if (age >= 89 && age < 99) {
-          timeOutlived += (age - 54);
+          time += (age - 54);
       } else if (age >= 79 && age < 89) {
-          timeOutlived += (age - 60);
+          time += (age - 60);
       } else if (age >= 69 && age < 79) {
-          timeOutlived += (age - 62);
-      } else if (age > 67 && age < 69) {
-          timeOutlived += (age - 67);
-      } else if (age >= 59 && age <= 67) {
-          timeLeft += (age - 67) * -1;
+          time += (age - 62);
+      } else if (age >= 59 && age < 69) {
+          time += (age - 67);
       } else if (age >= 49 && age < 59) {
-          timeLeft += (age - 67) * -1;
+          time += (age - 67);
       } else if (age >= 39 && age < 49) {
-          timeLeft += (age - 68) * -1;
+          time += (age - 68);
       } else if (age >= 29 && age < 39) {
-          timeLeft += (age - 71) * -1;
+          time += (age - 71);
       } else if (age >= 19 && age < 29) {
-          timeLeft += (age - 73) * -1;
+          time += (age - 73);
       } else if (age > 0 && age < 19) {
-          timeLeft += (age - 75) * -1;
+          time += (age - 75);
       }
     }
 
     if (this.sex === "f") {
       if (age >= 99 && age <= 109) {
-        timeOutlived += (age - 52);
+        time += (age - 52);
       } else if (age >= 89 && age < 99) {
-          timeOutlived += (age - 66);
+          time += (age - 66);
       } else if (age >= 79 && age < 89) {
-          timeOutlived += (age - 64);
+          time += (age - 64);
       } else if (age >= 69 && age < 79) {
-          timeOutlived += (age - 67);
+          time += (age - 67);
       } else if (age >= 59 && age < 69) {
-          timeLeft += (age - 72) * -1;
+          time += (age - 72);
       } else if (age >= 49 && age < 59) {
-          timeLeft += (age - 67) * -1;
+          time += (age - 67);
       } else if (age >= 39 && age < 49) {
-          timeLeft += (age - 68) * -1;
+          time += (age - 68);
       } else if (age >= 29 && age < 39) {
-          timeLeft += (age - 71) * -1;
+          time += (age - 71);
       } else if (age >= 19 && age < 29) {
-          timeLeft += (age - 73) * -1;
+          time += (age - 73);
       } else if (age > 0 && age < 19) {
-          timeLeft += (age - 75) * -1;
+          time += (age - 75);
       }
     }
 
-    if (timeLeft === 0){
-      return timeOutlived;
-    } else if (timeOutlived === 0){
-      return timeLeft;
+    return time;
+
+  }
+
+  timeOnEarth(){
+
+    let earth = this.timeLeftToLive();
+
+    if (earth <= 0){
+      let positive = (earth * -1);
+      return `You have ${positive} years left to live on Earth!`;
+    } else {
+      return `You have outlived the average person by ${earth} years!`;
     }
 
   }
 
+  timeOnMercury(){
 
+    let mercury = this.timeLeftToLive();
+
+    if (mercury <= 0){
+      let positive = (mercury * -1);
+      let mercuryResult = Math.floor(positive / .24 );
+      return `You have ${mercuryResult} years left to live on Mercury!`;
+    } else {
+      let mercuryResult2 = Math.floor(mercury / .24 );
+      return `You have outlived the average person by ${mercuryResult2} years!`;
+    }
+
+  }
 
 
 

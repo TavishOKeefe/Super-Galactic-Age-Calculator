@@ -33,8 +33,18 @@ describe('Age', function(){
   });
 
   it('should check how many years user has left to live, or how many years they have outlived their life expectancy', function(){
+    let newObject = new Age(1999, 5, 20, "m");
+    expect(newObject.timeLeftToLive()).toEqual(-54);
+  });
+
+  it('should return how many years user has left to live on Earth, or how many years they have outlived their life expectancy', function(){
     let newObject = new Age(1920, 5, 20, "m");
-    expect(newObject.timeLeftToLive()).toEqual(44);
+    expect(newObject.timeOnEarth()).toEqual('You have outlived the average person by 44 years!');
+  });
+
+  it('should return how many years user has left to live on Mercury, or how many years they have outlived their life expectancy', function(){
+    let newObject = new Age(1950, 5, 20, "f");
+    expect(newObject.timeOnMercury()).toEqual('You have 16 years left to live on Mercury!');
   });
 
 });
