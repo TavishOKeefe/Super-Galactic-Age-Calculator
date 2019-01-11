@@ -38,7 +38,7 @@ class Age {
   userAgeInMercuryYears(){
 
     let age = this.ageOfUser();
-    let ageInMercuryYears = Math.floor(age / .24 );
+    let ageInMercuryYears = Math.floor( age / .24 );
 
     return ageInMercuryYears;
 
@@ -47,7 +47,7 @@ class Age {
   userAgeInVenusYears(){
 
     let age = this.ageOfUser();
-    let ageInVenusYears = Math.floor(age / .62 );
+    let ageInVenusYears = Math.floor( age / .62 );
 
     return ageInVenusYears;
 
@@ -56,7 +56,7 @@ class Age {
   userAgeInMarsYears(){
 
     let age = this.ageOfUser();
-    let ageInMarsYears = Math.floor(age / 1.88 );
+    let ageInMarsYears = Math.floor( age / 1.88 );
 
     return ageInMarsYears;
 
@@ -65,7 +65,7 @@ class Age {
   userAgeInJupiterYears(){
 
     let age = this.ageOfUser();
-    let ageInJupiterYears = Math.floor(age / 11.86 );
+    let ageInJupiterYears = Math.floor( age / 11.86 );
 
     return ageInJupiterYears;
 
@@ -136,7 +136,7 @@ class Age {
       let positive = (earth * -1);
       return `You have ${positive} years left to live on Earth!`;
     } else {
-      return `You have outlived the average person by ${earth} years!`;
+      return `You have outlived the average person on Earth by ${earth} years!`;
     }
 
   }
@@ -147,15 +147,59 @@ class Age {
 
     if (mercury <= 0){
       let positive = (mercury * -1);
-      let mercuryResult = Math.floor(positive / .24 );
+      let mercuryResult = (positive / .24 ).toFixed(2);
       return `You have ${mercuryResult} years left to live on Mercury!`;
     } else {
-      let mercuryResult2 = Math.floor(mercury / .24 );
-      return `You have outlived the average person by ${mercuryResult2} years!`;
+      let mercuryResult2 = (mercury / .24 ).toFixed(2);
+      return `You have outlived the average person on Mercury by ${mercuryResult2} years!`;
     }
 
   }
 
+  timeOnVenus(){
+
+    let venus = this.timeLeftToLive();
+
+    if (venus <= 0){
+      let positive = (venus * -1);
+      let venusResult = ( positive / .62 ).toFixed(2);
+      return `You have ${venusResult} years left to live on Venus!`;
+    } else {
+      let venusResult2 = ( venus / .62 ).toFixed(2);
+      return `You have outlived the average person on Venus by ${venusResult2} years!`;
+    }
+
+  }
+
+  timeOnMars(){
+
+    let mars = this.timeLeftToLive();
+
+    if (mars <= 0){
+      let positive = (mars * -1);
+      let marsResult = ( positive / 1.88 ).toFixed(2);
+      return `You have ${marsResult} years left to live on Mars!`;
+    } else {
+      let marsResult2 = ( mars / 1.88 ).toFixed(2);
+      return `You have outlived the average person on Mars by ${marsResult2} years!`;
+    }
+
+  }
+
+  timeOnJupiter(){
+
+    let jupiter = this.timeLeftToLive();
+
+    if (jupiter <= 0){
+      let positive = (jupiter * -1);
+      let jupiterResult = ( positive / 11.86 ).toFixed(2);
+      return `You have ${jupiterResult} years left to live on Jupiter!`;
+    } else {
+      let jupiterResult2 = ( jupiter / 11.86 ).toFixed(2);
+      return `You have outlived the average person on Jupiter by ${jupiterResult2} years!`;
+    }
+
+  }
 
 
 

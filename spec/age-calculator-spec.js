@@ -39,12 +39,27 @@ describe('Age', function(){
 
   it('should return how many years user has left to live on Earth, or how many years they have outlived their life expectancy', function(){
     let newObject = new Age(1920, 5, 20, "m");
-    expect(newObject.timeOnEarth()).toEqual('You have outlived the average person by 44 years!');
+    expect(newObject.timeOnEarth()).toEqual('You have outlived the average person on Earth by 44 years!');
   });
 
   it('should return how many years user has left to live on Mercury, or how many years they have outlived their life expectancy', function(){
     let newObject = new Age(1950, 5, 20, "f");
-    expect(newObject.timeOnMercury()).toEqual('You have 16 years left to live on Mercury!');
+    expect(newObject.timeOnMercury()).toEqual('You have 16.67 years left to live on Mercury!');
+  });
+
+  it('should return how many years user has left to live on Venus, or how many years they have outlived their life expectancy', function(){
+    let newObject = new Age(1999, 5, 20, "f");
+    expect(newObject.timeOnVenus()).toEqual('You have 87.10 years left to live on Venus!');
+  });
+
+  it('should return how many years user has left to live on Mars, or how many years they have outlived their life expectancy', function(){
+    let newObject = new Age(1999, 5, 20, "f");
+    expect(newObject.timeOnMars()).toEqual('You have 28.72 years left to live on Mars!');
+  });
+
+  it('should return how many years user has left to live on Jupiter, or how many years they have outlived their life expectancy', function(){
+    let newObject = new Age(1960, 5, 20, "f");
+    expect(newObject.timeOnJupiter()).toEqual('You have 0.76 years left to live on Jupiter!');
   });
 
 });
