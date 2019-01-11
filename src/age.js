@@ -76,7 +76,7 @@ class Age {
     let age = this.ageOfUser();
     let time = 0;
 
-    if (this.sex === "m") {
+    if (this.sex === 1) {
       if (age >= 99 && age <= 109) {
         time += (age - 49);
       } else if (age >= 89 && age < 99) {
@@ -100,7 +100,7 @@ class Age {
       }
     }
 
-    if (this.sex === "f") {
+    if (this.sex === 2) {
       if (age >= 99 && age <= 109) {
         time += (age - 52);
       } else if (age >= 89 && age < 99) {
@@ -200,15 +200,6 @@ class Age {
     }
 
   }
-
-
-
-
-
-
-
-
-
 
 }
 
