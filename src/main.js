@@ -20,12 +20,14 @@ $(document).ready(function(){
       $('#result').html("Your month is invalid");
     } else if (inputDate > 31 || inputDate < 1){
       $('#result').html("Your day is invalid");
+    } else if (inputSex === 0){
+      $('#result').html("Please select your gender.");
     } else {
-      $('#age-on-earth').text(userInformation.ageOfUser());
-      $('#age-on-mercury').text(userInformation.userAgeInMercuryYears());
-      $('#age-on-venus').text(userInformation.userAgeInVenusYears());
-      $('#age-on-mars').text(userInformation.userAgeInMarsYears());
-      $('#age-on-jupiter').text(userInformation.userAgeInJupiterYears());
+      $('#age-on-earth').text("This is your age on Earth: " + userInformation.ageOfUser());
+      $('#age-on-mercury').text("This is your age on Mercury: " + userInformation.userAgeInMercuryYears());
+      $('#age-on-venus').text("This is your age on Venus: " + userInformation.userAgeInVenusYears());
+      $('#age-on-mars').text("This is your age on Mars: " + userInformation.userAgeInMarsYears());
+      $('#age-on-jupiter').text("This is your age on Jupiter: " + userInformation.userAgeInJupiterYears());
       $('#time-left-on-earth').text(userInformation.timeOnEarth());
       $('#time-left-on-mercury').text(userInformation.timeOnMercury());
       $('#time-left-on-venus').text(userInformation.timeOnVenus());
