@@ -26,11 +26,11 @@ $(document).ready(function(){
       $('#result').html("Please select your gender.");
     } else {
       $('#result').hide();
-      $('#age-on-earth').text("This is your age on Earth: " + userInformation.ageOfUser());
-      $('#age-on-mercury').text("This is your age on Mercury: " + userInformation.userAgeInMercuryYears());
-      $('#age-on-venus').text("This is your age on Venus: " + userInformation.userAgeInVenusYears());
-      $('#age-on-mars').text("This is your age on Mars: " + userInformation.userAgeInMarsYears());
-      $('#age-on-jupiter').text("This is your age on Jupiter: " + userInformation.userAgeInJupiterYears());
+      $('#age-on-earth').text("Your age on Earth is: " + userInformation.ageOfUser() + " years old.");
+      $('#age-on-mercury').text("Your age on Mercury is: " + userInformation.userAgeInMercuryYears() + " years old.");
+      $('#age-on-venus').text("Your age on Venus is: " + userInformation.userAgeInVenusYears() + " years old.");
+      $('#age-on-mars').text("Your age on Mars is: " + userInformation.userAgeInMarsYears() + " years old.");
+      $('#age-on-jupiter').text("Your age on Jupiter is: " + userInformation.userAgeInJupiterYears() + " years old.");
       $('#time-left-on-earth').text(userInformation.timeOnEarth());
       $('#time-left-on-mercury').text(userInformation.timeOnMercury());
       $('#time-left-on-venus').text(userInformation.timeOnVenus());
